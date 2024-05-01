@@ -2,12 +2,16 @@
   "name": "jorgegvalencia-dev",
   "type": "module",
   "version": "0.0.1",
+  "engines": {
+    "node": "18.20.2"
+  },
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro check && astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "lint:fix": "eslint --fix src/**/*.{js,ts,astro}"
   },
   "dependencies": {
     "@astrojs/check": "^0.5.10",
@@ -16,5 +20,12 @@
     "@astrojs/sitemap": "^3.1.4",
     "astro": "^4.7.0",
     "typescript": "^5.4.5"
+  },
+  "devDependencies": {
+    "@stylistic/eslint-plugin": "^1.8.0",
+    "@typescript-eslint/eslint-plugin": "^7.8.0",
+    "@typescript-eslint/parser": "^7.8.0",
+    "eslint": "^8.57.0",
+    "eslint-plugin-astro": "^1.1.1"
   }
 }
